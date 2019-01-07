@@ -98,10 +98,6 @@ public class WxService {
 			// 对用户的文本消息进行处理
 			msg = dealMessage(requestMap, msgType);
 			break;
-		// 图片消息
-		case "image":
-			msg = dealMessage(requestMap, msgType);
-			break;
 		// 对推送事件进行处理
 		case "event":
 			msg = dealEvent(requestMap);
@@ -144,18 +140,18 @@ public class WxService {
 	}
 
 	/**
-	 * 对不同的消息做处理
+	 * 对文本消息做处理
 	 * 
 	 * @param requestMap
 	 * @return
 	 */
 	private static BaseMessage dealMessage(Map<String, String> requestMap, String msgType) {
+		// 用户发来的内容
+		String content = requestMap.get("Content");
 
 		/**
 		 * 回复图文消息
 		 */
-		// 用户发来的内容
-		String content = requestMap.get("Content");
 
 		if (content != null && content.equals("设备状态")) {
 			List<Article> articles = new ArrayList<>();
