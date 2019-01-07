@@ -1,7 +1,5 @@
 package qrCode;
 
-import org.junit.Test;
-
 import net.sf.json.JSONObject;
 import service.WxService;
 import util.Util;

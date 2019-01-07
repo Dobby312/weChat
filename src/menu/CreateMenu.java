@@ -32,6 +32,7 @@ public class CreateMenu {
 		String url = "https://api.weixin.qq.com/cgi-bin/menu/create?access_token=ACCESS_TOKEN";
 		url = url.replace("ACCESS_TOKEN", WxService.getAccessToken());
 		// 发送请求
+		@SuppressWarnings("unused")
 		String result = Util.post(url, jsonObject.toString());
 		//System.out.println(result);
 	}

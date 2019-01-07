@@ -1,7 +1,6 @@
 package service;
 
 import java.io.InputStream;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -12,10 +11,7 @@ import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
 
 import handle.AccessToken;
-import handle.Article;
 import handle.BaseMessage;
-import handle.NewsMessage;
-import handle.TextMessage;
 import net.sf.json.JSONObject;
 import util.DealPushEvents;
 import util.DealTextMessage;
@@ -139,7 +135,5 @@ public class WxService {
 		}
 		return null;
 	}
-
-	
 
 }

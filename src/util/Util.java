@@ -7,10 +7,6 @@ import java.net.URLConnection;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
-import java.util.Map;
-
-import handle.BaseMessage;
-import handle.TextMessage;
 
 public class Util {
 

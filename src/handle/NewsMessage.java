@@ -10,7 +10,7 @@ public class NewsMessage extends BaseMessage{
 	@XStreamAlias("ArticleCount")
 	private String articleCount;
 	@XStreamAlias("Articles")
-	private List<Article> articles = new ArrayList();
+	private List<Article> articles = new ArrayList<Article>();
 	public String getArticleCount() {
 		return articleCount;
 	}
