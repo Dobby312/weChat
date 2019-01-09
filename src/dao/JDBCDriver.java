@@ -1,22 +1,38 @@
 package dao;
 
+import java.io.InputStream;
 import java.sql.*;
+import java.util.Properties;
 
 public class JDBCDriver {
-	private String url;
-	private String username;
-	private String password;
+	private static String url;
+	private static String username;
+	private static String password;
+	private static String driverName;
 	private Connection con;
 	private Statement st;
 	private ResultSet rs;
 
+	static {
+		InputStream inputStream = JDBCDriver.class.getClassLoader().getResourceAsStream("db.properties");
+		Properties properties = new Properties();
+		try {
+			properties.load(inputStream);
+
+			username = properties.getProperty("username");
+			password = properties.getProperty("password");
+			url = properties.getProperty("url");
+			driverName = properties.getProperty("driverName");
+			Class.forName(driverName);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
 	public JDBCDriver() {
-		url = "jdbc:mysql://127.0.0.1:3306/userscene?useUnicode=true&characterEncoding=utf-8";
-		username = "root";
-		password = "root";
 
 		try {
-			Class.forName("com.mysql.jdbc.Driver");
 			con = DriverManager.getConnection(url, username, password);
 			st = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
 		} catch (Exception e) {
@@ -61,8 +77,8 @@ public class JDBCDriver {
 			return false;
 		}
 	}
-	
-	//关闭连接
+
+	// 关闭连接
 	public void close() {
 		try {
 			if (con != null)
