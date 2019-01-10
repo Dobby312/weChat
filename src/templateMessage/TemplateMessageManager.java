@@ -45,7 +45,7 @@ public class TemplateMessageManager {
 	 * 发送报警模板消息
 	 */
 	@Test
-	public void sendTemplateMessage(String touser, String linkUrl, String num, String time, String adress) {
+	public  void sendTemplateMessage(String touser, String linkUrl, String num, String time, String adress) {
 		String token = WxService.getAccessToken();
 		String url = "https://api.weixin.qq.com/cgi-bin/message/template/send?access_token=" + token;
 		String data = toJson(touser, linkUrl, num, time, adress);

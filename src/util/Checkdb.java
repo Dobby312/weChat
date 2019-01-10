@@ -24,20 +24,21 @@ public class Checkdb {
 						e.printStackTrace();
 					}
 					System.out.println("开始扫描");
-					/**
-					 * 实时扫描数据库
-					 */
-					String sql = "select * form equipment where time>" + time;
+
+					// 扫描实时数据库
+					String sql = "select * from equipment where time>" + time;
 					if (jd.isNull(sql)) {
 						ResultSet result = jd.query(sql);
 						try {
-							num = result.getString("num");
+							while (result.next()) {
+								num = result.getString("num");
+							}
 
 						} catch (SQLException e) {
-							// TODO Auto-generated catch block
+
 							e.printStackTrace();
 						}
-						System.out.println(result);
+						System.out.println(num);
 					}
 
 					time = time + 600;
