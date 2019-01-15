@@ -1,7 +1,5 @@
 package templateMessage;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import org.junit.Test;
 import net.sf.json.JSONObject;
 import service.WxService;
@@ -9,14 +7,14 @@ import util.Util;
 
 public class TemplateMessageManager {
 
-	private static String touser = "obMc01sradiJc-tdgwm_mjI33LrY";
-	private static String linkUrl = "http://www.coolman.top/Gifit";
-	private static String num = "21";
-	private static String adress = "合欢路19号";
-	private static long currentTime = System.currentTimeMillis();
-	static SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-	static Date date = new Date(currentTime);
-	private static String time = formatter.format(date);
+//	private static String touser = "obMc01sradiJc-tdgwm_mjI33LrY";
+//	private static String linkUrl = "http://www.coolman.top/Gifit";
+//	private static String num = "21";
+//	private static String adress = "合欢路19号";
+//	private static long currentTime = System.currentTimeMillis();
+//	static SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+//	static Date date = new Date(currentTime);
+//	private static String time = formatter.format(date);
 
 	/**
 	 * 设置行业
