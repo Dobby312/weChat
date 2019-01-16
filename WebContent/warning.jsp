@@ -14,7 +14,6 @@
 	<span>设备地址</span><input type="text" id="adress" name="adress">
 	<span>链接地址</span><input type="text" id="url" name="linkUrl">
 	<input type="submit" value="提交">
-	
 	</form>
 </body>
 </html>

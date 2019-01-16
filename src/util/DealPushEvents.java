@@ -31,11 +31,14 @@ public class DealPushEvents {
 		String key = requestMap.get("EventKey");
 		switch (key) {
 		case "1":
-			// 处理点击了第一个一级菜单
+			// 处理点击了第一个一级菜单	
 			return new TextMessage(requestMap, "账户激活成功");
-		case "32":
-			// 处理点击了第三个一级菜单的第二个子菜单
-			return new TextMessage(requestMap, "你点了合作选项");
+		case "AnHui":
+			return new TextMessage(requestMap, "显示安徽地区的客户");
+		case "JiangSu":
+			return new TextMessage(requestMap,"显示江苏地区的客户");
+		case "HuNan": 
+			return new TextMessage(requestMap,"显示湖南地区的客户");
 
 		default:
 			break;

@@ -8,7 +8,7 @@ import javax.net.ssl.X509TrustManager;
 /**
  * 自定义一个安全证书信任管理器，实现X509TrustManager接口
  * 方法全部为空，默认为所有链接都安全，可能存在安全隐患
- * @author Administrator
+ * @author Wzf
  *
  */
 
