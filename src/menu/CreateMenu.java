@@ -2,7 +2,6 @@ package menu;
 
 import menu.Button;
 import menu.ClickButton;
-import menu.PhotoOrAlbum;
 import menu.SubButton;
 import menu.ViewButton;
 import net.sf.json.JSONObject;
