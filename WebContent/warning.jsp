@@ -9,11 +9,11 @@
 <body>
 
 	<form action="SaRServlet" method="post">
-		<span>设备编号</span><input type="text" id="num" name="num"> <span>报警时间</span><input
-			type="text" id="time" name="time"> <span>设备地址</span><input
-			type="text" id="adress" name="adress"> <span>链接地址</span><input
-			type="text" id="url" name="linkUrl"> <input type="submit"
-			value="提交">
+		<span>设备编号</span><input type="text" id="num" name="num"> 
+		<span>报警时间</span><input type="text" id="time" name="time"> 
+		<span>设备地址</span><input type="text" id="adress" name="adress"> 
+		<span>链接地址</span><input type="text" id="url" name="linkUrl"> 
+		<input type="submit" value="提交">
 	</form>
 </body>
 </html>

@@ -54,12 +54,8 @@ public class DealPushEvents {
 
 		String openID = requestMap.get("FromUserName");
 		String sceneID = requestMap.get("EventKey");
-		System.out.println(openID);
-		System.out.println(sceneID);
 		String sql = "insert into userscene(userID,sceneID) values('" + openID + "','" + sceneID + "')";
 		jd.insort(sql);
-		System.out.println(openID);
-		System.out.println(sceneID);
 		return new TextMessage(requestMap, "绑定成功");
 	}
 

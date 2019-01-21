@@ -52,10 +52,6 @@ public class DealTextMessage {
 					e.printStackTrace();
 				}
 			}
-//				else  {
-//				TextMessage tm = new TextMessage(requestMap, "请输入正确的公司名称");
-//				return tm;
-//			}
 		}
 		TextMessage tm = new TextMessage(requestMap, "请输入正确的公司名称");
 		return tm;

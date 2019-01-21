@@ -38,7 +38,11 @@ public class SaRServlet extends HttpServlet {
 		String adress = request.getParameter("adress");
 		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		String time = formatter.format(new Date(Long.parseLong(request.getParameter("time"))));
-
+		System.out.println(linkUrl);
+		System.out.println(num);
+		System.out.println(adress);
+		System.out.println(time);
+		
 		// 根据设备编号去查询对应的管理员
 		ArrayList<String> list = SearchDB.search(num);
 		TemplateMessageManager tm = new TemplateMessageManager();
