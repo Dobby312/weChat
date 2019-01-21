@@ -15,7 +15,7 @@ import dao.JDBCDriver;
 @WebServlet("/AddUser")
 public class AddUserServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-   
+	JDBCDriver jd = new JDBCDriver();
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 	}
@@ -26,9 +26,9 @@ public class AddUserServlet extends HttpServlet {
 		response.setContentType("text/html;charset=utf-8");
 		String name = request.getParameter("name");
 		String url = request.getParameter("url");
-		JDBCDriver jd = new JDBCDriver();
 		String sql = "insert into company(name,url) values('"+name+"','"+url+"')";
 		jd.insort(sql);
+		request.getRequestDispatcher("success.jsp").forward(request, response);
 	}
 
 }

@@ -5,15 +5,13 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>管理界面</title>
-<script type="text/javascript" src="jquery-3.3.1.js"></script>
+<script type="text/javascript" src="../js/jquery-3.3.1.js"></script>
 <script>
 	$(function() {
-		$("button")
-				.click(
+		$("button").click(
 						function() {
 							var id = $("#scene").val();
-							$
-									.ajax({
+							$.ajax({
 										url : "GetQrCode",
 										type : "POST",
 										data : {
@@ -38,16 +36,15 @@
 		<span style="font-size: 25px; color: blue">请输入设备编号</span>: <input
 			type="text" id="scene" name="id">
 	</div>
-
+	
 	<p></p>
 	<p></p>
-
+	
 	<button>
 		<span style="font-size: 25px; color: blue">生成二维码</span>
 	</button>
 	<br>
 	<img alt="" src="">
-	
 	<p></p>
 	<p></p>
 
