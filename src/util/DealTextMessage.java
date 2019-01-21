@@ -51,12 +51,14 @@ public class DealTextMessage {
 				} catch (SQLException e) {
 					e.printStackTrace();
 				}
-			}else {
-				TextMessage tm = new TextMessage(requestMap, "请输入正确的公司名称");
-				return tm;
 			}
+//				else  {
+//				TextMessage tm = new TextMessage(requestMap, "请输入正确的公司名称");
+//				return tm;
+//			}
 		}
-		return null;
+		TextMessage tm = new TextMessage(requestMap, "请输入正确的公司名称");
+		return tm;
 	}
 
 	/**

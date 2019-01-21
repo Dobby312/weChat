@@ -54,7 +54,9 @@ public class DealPushEvents {
 
 		String openID = requestMap.get("FromUserName");
 		String sceneID = requestMap.get("EventKey");
-		String sql = "insert into userScene(userID,sceneID) values('" + openID + "','" + sceneID + "')";
+		System.out.println(openID);
+		System.out.println(sceneID);
+		String sql = "insert into userscene(userID,sceneID) values('" + openID + "','" + sceneID + "')";
 		jd.insort(sql);
 		System.out.println(openID);
 		System.out.println(sceneID);
@@ -66,7 +68,7 @@ public class DealPushEvents {
 
 		String openID = requestMap.get("FromUserName");
 		String sceneID = requestMap.get("EventKey").substring(8);
-		String sql = "insert into userScene(userID,sceneID) values('" + openID + "','" + sceneID + "')";
+		String sql = "insert into userscene(userID,sceneID) values('" + openID + "','" + sceneID + "')";
 		jd.insort(sql);
 		System.out.println(openID);
 		System.out.println(sceneID);
