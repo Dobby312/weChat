@@ -25,6 +25,7 @@ public class TemplateMessageManager {
 		String url = "https://api.weixin.qq.com/cgi-bin/template/api_set_industry?access_token=" + token;
 		String data = " {\r\n" + "          \"industry_id1\":\"1\",\r\n" + "          \"industry_id2\":\"3\"\r\n"
 				+ "       }";
+		@SuppressWarnings("unused")
 		String result = Util.post(url, data);
 
 	}
@@ -36,6 +37,7 @@ public class TemplateMessageManager {
 	public void get() {
 		String token = WxService.getAccessToken();
 		String url = "https://api.weixin.qq.com/cgi-bin/template/get_industry?access_token=" + token;
+		@SuppressWarnings("unused")
 		String result = Util.get(url);
 	}
 
@@ -47,6 +49,7 @@ public class TemplateMessageManager {
 		String token = WxService.getAccessToken();
 		String url = "https://api.weixin.qq.com/cgi-bin/message/template/send?access_token=" + token;
 		String data = toJson(touser, linkUrl, num, time, adress);
+		@SuppressWarnings("unused")
 		String result = Util.post(url, data);
 
 	}
